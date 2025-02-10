@@ -7,8 +7,6 @@ export function Navigation() {
   const location = useLocation();
   const { theme, toggleTheme } = useTheme();
 
-  
-  
   return (
     <nav className="py-8 transition-colors duration-200 dark:bg-[#1a1a1a]">
       <div className="max-w-3xl mx-auto px-6">
@@ -16,21 +14,21 @@ export function Navigation() {
           <Link to="/" className="font-serif text-2xl dark:text-white">Pratik Bokade</Link>
           <div className="flex items-center gap-6">
             <Link 
-              to="/" 
+              to=""  // 🔥 FIXED: Removed leading slash
               className="text-[13px] font-medium relative group dark:text-gray-300"
             >
               Home
               <span className={`absolute -bottom-1 left-0 w-full h-[1.5px] bg-current transform transition-transform duration-200 ${location.pathname === '/' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
             </Link>
             <Link 
-              to="/blog" 
+              to="blog"  // 🔥 FIXED: Removed leading slash
               className="text-[13px] font-medium relative group dark:text-gray-300"
             >
               Blog
               <span className={`absolute -bottom-1 left-0 w-full h-[1.5px] bg-current transform transition-transform duration-200 ${location.pathname === '/blog' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
             </Link>
             <Link 
-              to="/projects" 
+              to="projects"  // 🔥 FIXED: Removed leading slash
               className="text-[13px] font-medium relative group dark:text-gray-300"
             >
               Projects
