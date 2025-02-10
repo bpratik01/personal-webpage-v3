@@ -19,9 +19,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/personal-webpage-v3" element={<Home />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:slug" element={<BlogPost />} />
-            <Route path="/projects" element={<Projects />} />
+            <Route path="personal-webpage-v3/blog" element={<Blog />} />
+            <Route path="personal-webpage-v3/blog/:slug" element={<BlogPost />} />
+            <Route path="personal-webpage-v3/projects" element={<Projects />} />
           </Routes>
         </div>
       </Router>
