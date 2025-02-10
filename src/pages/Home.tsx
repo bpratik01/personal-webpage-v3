@@ -73,52 +73,29 @@ export function Home() {
   ];
 
   return (
-    <div className=" max-w-3xl mx-auto flex flex-col inset-0  overflow-hidden"> {/* Added h-screen and overflow-hidden */}
-      <header className="mb-16">
-        <p className="text-[15px] leading-relaxed text-gray-800 dark:text-gray-300 mb-4">
-        Machine Learning Engineer.  I talk to machines, and they listen (most of the time).  I specialize in computer vision, generative AI, and Core ML. I build AI models that are big, fast, and smart.  MLOps? I make it disappear (the chaos, not the pipelines).  I'm good at solving problems with AI – recommendations, images, predictions... you name it.
+    <div className="w-full px-4 sm:px-6 md:max-w-3xl md:mx-auto"> 
+      <header className="mb-8 sm:mb-12">
+        <p className="text-sm sm:text-[15px] leading-relaxed text-gray-800 dark:text-gray-300 mb-4">
+          Machine Learning Engineer. I talk to machines, and they listen (most of the time). I specialize in computer vision, generative AI, and Core ML. I build AI models that are big, fast, and smart. MLOps? I make it disappear (the chaos, not the pipelines). I'm good at solving problems with AI – recommendations, images, predictions... you name it.
         </p>
-        <div className="flex gap-4">
-          <a 
-            href="https://github.com/bpratik01" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
-          >
-            <Github size={18} />
-          </a>
-          <a 
-            href="https://x.com/pratik_csv" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
-          >
-            <Twitter size={18} />
-          </a>
-          <a 
-            href="https://linkedin.com/in/pratik-bokade" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
-          >
-            <Linkedin size={18} />
-          </a>
-          <a 
-            href="mailto:pratikbokadework@gmail.com" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
-          >
-            <Mail size={18} />
-          </a>
-          <a 
-            href="https://buymeacoffee.com/pratik.csv" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
-          >
-            <SiBuymeacoffee size={18} />
-          </a>
+        <div className="flex gap-4 sm:gap-5 items-center">
+          {[
+            { Icon: Github, href: "https://github.com/bpratik01" },
+            { Icon: Twitter, href: "https://x.com/pratik_csv" },
+            { Icon: Linkedin, href: "https://linkedin.com/in/pratik-bokade" },
+            { Icon: Mail, href: "mailto:pratikbokadework@gmail.com" },
+            { Icon: SiBuymeacoffee, href: "https://buymeacoffee.com/pratik.csv" }
+          ].map(({ Icon, href }, index) => (
+            <a 
+              key={index}
+              href={href} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
+            >
+              <Icon size={18} />
+            </a>
+          ))}
         </div>
       </header>
 
