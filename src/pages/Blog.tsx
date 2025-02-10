@@ -60,8 +60,7 @@ export function Blog() {
       <header className="mb-16">
         <h1 className="text-2xl font-medium mb-4 dark:text-white">Blog</h1>
         <p className="text-[15px] leading-relaxed text-gray-800 dark:text-gray-300">
-          Thoughts and insights on software development, artificial intelligence, 
-          and the future of technology.
+          coming soon...
         </p>
       </header>
 

@@ -1,7 +1,5 @@
 import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
-import habitXpImage from '../content/images/habitxp.png';
-import acuteReportImage from '../content/images/acutereport.png';
 
 interface Project {
   title: string;
@@ -15,60 +13,99 @@ interface Project {
 
 export function Projects() {
   const projects: Project[] = [
+    //////////////////////////////////////////////////
     {
-      title: 'HabitXp',
-      date: 'Dec 30, 2024',
-      description: 'Habit tracker with sync and gamifications',
-      image: habitXpImage,
+      title: 'Pokenet',
+      date: 'May 22, 2024',
+      description: 'This project uses a deep learning model (ResNet-34) to classify Pokémon images. Built with Fastai and Streamlit, it’s simple and easy to use.',
+      link: 'https://pokenet-bpratik01.streamlit.app/',
+      githubUrl: 'https://github.com/bpratik01/Pokenet',
+      bulletPoints: [
+        'Python, Fastai, Streamlit',
+      ]
+    },
+    {
+      title: 'Pesonal Portfolio Website',
+      date: 'Feb 10, 2025',
+      description: 'My personal portfolio website built with React, TypeScript, and Tailwind CSS.',
       link: 'https://habitxp.com',
       githubUrl: 'https://github.com/shinbehavior',
       bulletPoints: [
-        'All on one graph, streaks',
-        'Sync',
-        'Leaderboard, XP, Achievements',
+        ' React, TypeScript, Tailwind CSS',
+        ' Dark mode, responsive design',
+        ' Blog with markdown support',
       ]
     },
     {
-      title: 'AcuteReport',
-      date: 'Feb 2, 2025',
-      description: '2nd place project on Llama Hackathon by Meta',
-      image: acuteReportImage,
-      link: 'https://github.com/MartinJohannesNilsen/acutereport.ai',
-      githubUrl: 'https://github.com/MartinJohannesNilsen/acutereport.ai',
+      title: 'Omni-Vision',
+      date: 'Feb 8, 2025',
+      description: 'Omni-Vision is a computer vision project that aims at providing a semi-autonomus driving experience to the user.',
+      link: 'https://github.com/bpratik01/Omni_Vision',
+      githubUrl: 'https://github.com/bpratik01/Omni_Vision',
       bulletPoints: [
-        'maded by me and 3 m8',
-        'Llama 3.3 sum',
+        'Python, TensorFlow, YOLO, OpenCV ',
       ]
     },
     {
-      title: 'shinbehavior',
+      title: 'MLOPS',
+      date: 'Jan 8, 2025',
+      description: 'A collection of scripts and projects that’s all about the Ops in MLOps.',
+      link: 'https://github.com/bpratik01/MLOPS',
+      githubUrl: 'https://github.com/bpratik01/MLOPS',
+      bulletPoints: [
+        'Python, Docker, CI/CD',
+        'Kubernetes, ArgoCD',
+      ]
+    },
+    {
+      title: 'yt-transcription',
       date: 'Feb 5, 2025',
-      description: 'This Website!',
-      link: 'https://shinbehavior.com',
-      githubUrl: 'https://github.com/shinbehavior/personal-webpage-v3',
+      description: 'Transcribe YouTube videos effortlessly using Whisper (OpenAI) for accurate speech-to-text conversion.',
+      link: 'https://github.com/bpratik01/yt-transcription',
+      githubUrl: 'https://github.com/bpratik01/yt-transcription',
       bulletPoints: [
-        'react, ts, tailwind',
-        'generate blog post by inserting .md file in the folder',
+        'yt-dlp, Whisper (OpenAI), Python',
       ]
     },
     {
-      title: 'shaug',
-      date: 'Nov 6, 2024',
-      description: 'Tool for image augmenations',
-      link: 'https://github.com/shinbehavior/shaug',
-      githubUrl: 'https://github.com/shinbehavior/shaug',
+      title: 'US-Accident_Severity-Prediction',
+      date: 'Jan 11, 2025',
+      description: 'Predicting accident severity in the United States using advanced machine learning techniques, specifically XGBoost.',
+      link: 'https://github.com/bpratik01/US-Accident_Severity-Prediction',
+      githubUrl: 'https://github.com/bpratik01/US-Accident_Severity-Prediction',
       bulletPoints: [
-        'python script',
+        'Python, XGBoost, DVC, Git',
+      ]
+    },
+    {
+      title: 'NutriScan',
+      date: 'Aug 1, 2024',
+      description: 'NutriScan is a web app that uses Gemini API and Hugging Face Inference API to scan food images and provide instant nutritional information.',
+      link: 'https://github.com/bpratik01/NutriScan',
+      githubUrl: 'https://github.com/bpratik01/NutriScan',
+      bulletPoints: [
+        'Python, Hugging Face, Gemini API',
+      ]
+    },
+    
+    {
+      title: 'Airport-Dashboard',
+      date: 'Dec 25, 2024',
+      description: 'This project uses SQL to build an airport dashboard displaying available flights from various sources to destinations.',
+      link: 'https://github.com/bpratik01/Airport-Dashboard',
+      githubUrl: 'https://github.com/bpratik01/Airport-Dashboard',
+      bulletPoints: [
+        'Streamlit, Python, SQL',
       ]
     },
   ];
-
+///////////////////////////////////////////////////////////////////////
   return (
     <div className="max-w-6xl mx-auto px-6">
       <header className="mb-16">
         <h1 className="text-2xl font-medium mb-4 dark:text-white">Projects</h1>
         <p className="text-[15px] leading-relaxed text-gray-800 dark:text-gray-300">
-          rn working mostly on closed-source and corpo projects
+          Build fast, ship fast.
         </p>
       </header>
 
