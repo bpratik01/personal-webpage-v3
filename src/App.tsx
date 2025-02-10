@@ -17,10 +17,10 @@ function App() {
              
           <Navigation />
           <Routes>
-            <Route path="" element={<Home />} />
-            <Route path="blog" element={<Blog />} />
-            <Route path="blog/:slug" element={<BlogPost />} />
-            <Route path="projects" element={<Projects />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/projects" element={<Projects />} />
           </Routes>
         </div>
       </Router>
