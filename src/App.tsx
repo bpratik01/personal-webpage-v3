@@ -9,7 +9,7 @@ import { ThemeProvider } from './context/ThemeContext';
 function App() {
   return (
     <ThemeProvider>
-      <Router basename='/personal-webpage-v3' >
+      <Router basename="/personal-webpage-v3" >
         <div className="relative min-h-screen bg-[#fafafa] dark:bg-[#1a1a1a] transition-colors duration-200">
           {/* Pull effects */}
           <div className="fixed inset-x-0 top-0 h-16 bg-gradient-to-b from-[#fafafa] dark:from-[#1a1a1a] to-transparent transform -translate-y-full" />
@@ -17,7 +17,7 @@ function App() {
              
           <Navigation />
           <Routes>
-            <Route path="" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="blog" element={<Blog />} />
             <Route path="blog/:slug" element={<BlogPost />} />
             <Route path="projects" element={<Projects />} />
