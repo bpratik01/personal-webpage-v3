@@ -7,35 +7,34 @@ export function Navigation() {
   const location = useLocation();
   const { theme, toggleTheme } = useTheme();
 
-  // 🔥 Fix: Normalize path to remove basename
-  const currentPath = location.pathname.replace("/personal-webpage-v3", ""); 
-
+  
+  
   return (
     <nav className="py-8 transition-colors duration-200 dark:bg-[#1a1a1a]">
       <div className="max-w-3xl mx-auto px-6">
         <div className="flex justify-between items-center">
-          <Link to="" className="font-serif text-2xl dark:text-white">Pratik Bokade</Link>
+          <Link to="/" className="font-serif text-2xl dark:text-white">Pratik Bokade</Link>
           <div className="flex items-center gap-6">
             <Link 
-              to="/"  
+              to="/" 
               className="text-[13px] font-medium relative group dark:text-gray-300"
             >
               Home
-              <span className={`absolute -bottom-1 left-0 w-full h-[1.5px] bg-current transform transition-transform duration-200 ${currentPath === '' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
+              <span className={`absolute -bottom-1 left-0 w-full h-[1.5px] bg-current transform transition-transform duration-200 ${location.pathname === '/' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
             </Link>
             <Link 
-              to="/blog"  
+              to="/blog" 
               className="text-[13px] font-medium relative group dark:text-gray-300"
             >
               Blog
-              <span className={`absolute -bottom-1 left-0 w-full h-[1.5px] bg-current transform transition-transform duration-200 ${currentPath === '/blog' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
+              <span className={`absolute -bottom-1 left-0 w-full h-[1.5px] bg-current transform transition-transform duration-200 ${location.pathname === '/blog' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
             </Link>
             <Link 
-              to="/projects"  
+              to="/projects" 
               className="text-[13px] font-medium relative group dark:text-gray-300"
             >
               Projects
-              <span className={`absolute -bottom-1 left-0 w-full h-[1.5px] bg-current transform transition-transform duration-200 ${currentPath === '/projects' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
+              <span className={`absolute -bottom-1 left-0 w-full h-[1.5px] bg-current transform transition-transform duration-200 ${location.pathname === '/projects' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
             </Link>
             <button
               onClick={toggleTheme}
