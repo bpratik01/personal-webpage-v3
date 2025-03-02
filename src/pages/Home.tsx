@@ -3,9 +3,19 @@ import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
 import { SiBuymeacoffee } from "react-icons/si";
 import { TimelineItem } from '../types';
 import { Timeline } from '../components/Timeline';
+import logo from '../icons/chill-gui.svg';
+
 
 export function Home() {
   const timelineItems: TimelineItem[] = [
+    {
+      type: 'project',
+      title: 'NotesGuide.ai',
+      date: 'Mar 2, 2025',
+      description: 'NotesGuide.ai lets students and teachers upload study materials to create smart, tailored notes using AI.',
+      link: 'https://notesguideai.streamlit.app/',
+      isNew: true
+    },
     {
       type: 'project',
       title: 'Personal Portfolio Website',
@@ -95,8 +105,17 @@ export function Home() {
             >
               <Icon size={18} />
             </a>
+            
           ))}
+          <button>
+              <img
+                src={logo}
+                alt="Theme toggle"
+                className={`w-10 h-10`}
+              />
+            </button>
         </div>
+        
       </header>
 
       <Timeline items={timelineItems} />
