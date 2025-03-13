@@ -107,13 +107,7 @@ export function Home() {
             </a>
             
           ))}
-          <button>
-              <img
-                src={logo}
-                alt="Theme toggle"
-                className={`w-10 h-10`}
-              />
-            </button>
+          
         </div>
         
       </header>
