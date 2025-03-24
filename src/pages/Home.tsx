@@ -3,7 +3,6 @@ import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
 import { SiBuymeacoffee } from "react-icons/si";
 import { TimelineItem } from '../types';
 import { Timeline } from '../components/Timeline';
-import logo from '../icons/chill-gui.svg';
 
 
 export function Home() {
